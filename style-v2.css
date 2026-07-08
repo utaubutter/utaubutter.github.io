@@ -394,3 +394,20 @@ section p{
 .voice-item:hover{
     color: inherit;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+a:active {
+    color: inherit;
+}
