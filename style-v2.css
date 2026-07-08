@@ -359,30 +359,6 @@ section p{
 
 }
 
-.voice-item span{
-
-    display:block;
-
-    margin-top:18px;
-
-    color:#4b5563;
-
-    font-size:.95rem;
-
-}
-
-.voice-item small{
-
-    display:block;
-
-    margin-top:8px;
-
-    color:#9ca3af;
-
-    letter-spacing:.05em;
-
-}
-
 .voice-item{
     color: inherit;
 }
@@ -421,9 +397,3 @@ a:active {
     text-decoration:none !important;
 }
 
-.voice-list h2,
-.voice-list p,
-.voice-list span,
-.voice-list small{
-    color:inherit;
-}
