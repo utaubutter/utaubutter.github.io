@@ -278,3 +278,107 @@ section p{
     transform:translateY(-2px);
 
 }
+
+/* ------------------------
+   Voicebank List
+------------------------- */
+
+.voice-list{
+
+    margin-top:56px;
+
+}
+
+.voice-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    padding:28px 0;
+
+    border-bottom:1px solid rgba(190,205,224,.35);
+
+    transition:.25s ease;
+
+}
+
+.voice-item::after{
+
+    content:"→";
+
+    font-size:1rem;
+
+    color:#8d97a5;
+
+    opacity:0;
+
+    transform:translateX(-8px);
+
+    transition:.25s;
+
+}
+
+.voice-item:hover{
+
+    padding-left:12px;
+
+}
+
+.voice-item:hover::after{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.voice-item h2{
+
+    margin:0;
+
+    font-size:1.35rem;
+
+    font-weight:400;
+
+}
+
+.voice-item p{
+
+    margin-top:8px;
+
+    color:#8d97a5;
+
+    font-size:.9rem;
+
+}
+
+.voice-item span{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#4b5563;
+
+    font-size:.95rem;
+
+}
+
+.voice-item small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#9ca3af;
+
+    letter-spacing:.05em;
+
+}
