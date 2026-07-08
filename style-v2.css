@@ -1,1 +1,194 @@
+/* ------------------------
+   Butter Website v2
+------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Zen Kaku Gothic New",sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:32px;
+
+    color:#30353d;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.95), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(207,227,255,.55), transparent 35%),
+        linear-gradient(180deg,#f7f9fc,#eef4fb);
+
+}
+
+/* ガラスカード */
+
+.glass{
+
+    width:min(100%,520px);
+
+    padding:72px 56px;
+
+    background:rgba(255,255,255,.42);
+
+    backdrop-filter:blur(28px);
+
+    -webkit-backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    border-radius:36px;
+
+    box-shadow:
+        0 20px 60px rgba(174,190,212,.18),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+}
+
+/* タイトル */
+
+h1{
+
+    font-size:3rem;
+
+    font-weight:300;
+
+    letter-spacing:.18em;
+
+    text-align:center;
+
+}
+
+.subtitle{
+
+    margin-top:14px;
+
+    text-align:center;
+
+    color:#8b95a4;
+
+    font-size:.9rem;
+
+    letter-spacing:.18em;
+
+}
+
+/* メニュー */
+
+nav{
+
+    margin-top:64px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+nav a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#3f4652;
+
+    padding:18px 2px;
+
+    border-bottom:1px solid rgba(190,205,224,.35);
+
+    transition:.25s ease;
+
+    font-size:1rem;
+
+    letter-spacing:.05em;
+
+}
+
+nav a::after{
+
+    content:"→";
+
+    opacity:0;
+
+    transform:translateX(-8px);
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    padding-left:12px;
+
+}
+
+nav a:hover::after{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* フッター */
+
+footer{
+
+    margin-top:64px;
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    color:#98a2af;
+
+    letter-spacing:.12em;
+
+}
+
+/* スマホ */
+
+@media (max-width:640px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .glass{
+
+        padding:48px 32px;
+
+        border-radius:28px;
+
+    }
+
+    h1{
+
+        font-size:2.3rem;
+
+    }
+
+}
