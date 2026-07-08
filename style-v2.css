@@ -192,3 +192,89 @@ footer{
     }
 
 }
+
+/* 戻る */
+
+.back{
+
+    display:inline-block;
+
+    margin-bottom:42px;
+
+    text-decoration:none;
+
+    color:#8d97a5;
+
+    transition:.25s;
+
+}
+
+.back:hover{
+
+    transform:translateX(-4px);
+
+}
+
+/* セクション */
+
+section{
+
+    margin-top:56px;
+
+}
+
+h2{
+
+    font-size:1.1rem;
+
+    font-weight:500;
+
+    margin-bottom:14px;
+
+}
+
+section p{
+
+    color:#6d7481;
+
+    line-height:1.8;
+
+}
+
+/* ボタン */
+
+.buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.buttons a{
+
+    text-decoration:none;
+
+    color:#3f4652;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.45);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    transition:.25s;
+
+}
+
+.buttons a:hover{
+
+    transform:translateY(-2px);
+
+}
