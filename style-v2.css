@@ -411,3 +411,19 @@ a:hover {
 a:active {
     color: inherit;
 }
+
+.voice-list a,
+.voice-list a:link,
+.voice-list a:visited,
+.voice-list a:hover,
+.voice-list a:active{
+    color:#30353d !important;
+    text-decoration:none !important;
+}
+
+.voice-list h2,
+.voice-list p,
+.voice-list span,
+.voice-list small{
+    color:inherit;
+}
