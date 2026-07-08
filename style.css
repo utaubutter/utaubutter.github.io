@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Butter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<main class="glass">
+
+    <h1>Butter</h1>
+
+    <p class="subtitle">
+        Transparent Voice Library
+    </p>
+
+    <nav>
+
+        <a href="#">Character</a>
+
+        <a href="#">Voicebank</a>
+
+        <a href="#">Gallery</a>
+
+        <a href="#">Guideline</a>
+
+        <a href="#">Download</a>
+
+    </nav>
+
+</main>
+
+</body>
+
+</html>
