@@ -382,3 +382,15 @@ section p{
     letter-spacing:.05em;
 
 }
+
+.voice-item{
+    color: inherit;
+}
+
+.voice-item:visited{
+    color: inherit;
+}
+
+.voice-item:hover{
+    color: inherit;
+}
