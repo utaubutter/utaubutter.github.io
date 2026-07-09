@@ -1,5 +1,5 @@
 /* ------------------------
-   Website v2
+   Butter Website v2
 ------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
@@ -359,7 +359,7 @@ section p{
     }
 
     .glass{
-        padding: 48px 32px;
+        padding: 48px 24px;
         border-radius: 28px;
     }
 
@@ -367,10 +367,21 @@ section p{
         font-size: 2.3rem;
     }
 
+   .voice-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 20px 0;
+    }
+
     .voice-item h2{
         font-size: 1.2rem;
     }
 
+    .voice-item p {
+        margin-top: 2px;
+    }
+   
     .character{
         grid-template-columns: 1fr;
         gap: 28px;
@@ -392,20 +403,23 @@ section p{
 
     .buttons {
         flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .buttons a {
-        width: 48%;
-        padding: 8px 10px;
+        flex: 1 1 130px; 
+        max-width: none;
+        padding: 12px 10px;
     }
     
     .buttons a span {
         font-size: 0.85rem;
+        white-space: nowrap;
     }
     
     .buttons a small {
         font-size: 0.65rem;
+        white-space: nowrap;
     }
 }
