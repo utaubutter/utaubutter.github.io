@@ -191,8 +191,6 @@ section p{
 
 .buttons a:hover{
     background: rgba(255,255,255,.55);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(174,190,212,.18);
 }
 
 .buttons a span{
