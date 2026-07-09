@@ -75,35 +75,45 @@ const audio = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 
+// Sampleボタン（上の大きなボタン）を押した時の処理
 sampleBtn.addEventListener('click', () => {
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
+        // プレイヤーを表示（最初は停止状態、ボタンは▶マーク）
         miniPlayer.style.display = 'flex';
         playPauseBtn.textContent = '▶';
     } else {
+        // すでに開いている時にもう一度押したら、音を完全に止めてプレイヤーを閉じる
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
+        progressFill.style.width = '0%';
     }
 });
 
+// プレイヤー側の丸い再生・一時停止ボタンを押した時の処理
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.textContent = '⏸';
+        playPauseBtn.textContent = '⏸'; // 再生中になったら一時停止マークにする
     } else {
         audio.pause();
-        playPauseBtn.textContent = '▶';
+        playPauseBtn.textContent = '▶'; // 一時停止したら再生マークに戻す
     }
 });
 
+// 音声の再生位置に合わせてバーを伸ばす
 audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    progressFill.style.width = `${progress}%`;
+    if (audio.duration) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressFill.style.width = `${progress}%`;
+    }
 });
 
+// 曲が最後まで終わったら、プレイヤーは閉じずに最初の状態に戻す
 audio.addEventListener('ended', () => {
-    miniPlayer.style.display = 'none';
-    progressFill.style.width = '0%';
+    audio.currentTime = 0; // 再生位置を最初に戻す
+    playPauseBtn.textContent = '▶'; // ボタンを再生マークに戻す
+    progressFill.style.width = '0%'; // バーをゼロに戻す
 });
     
 </script>
