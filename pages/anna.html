@@ -77,11 +77,9 @@ const progressFill = document.getElementById('progress-fill');
 
 sampleBtn.addEventListener('click', () => {
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
-        // プレイヤーを表示（最初は停止状態、ボタンは▶マーク）
         miniPlayer.style.display = 'flex';
         playPauseBtn.textContent = '▶';
     } else {
-        // すでに開いている時にもう一度押したら、音を完全に止めてプレイヤーを閉じる
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
@@ -92,10 +90,10 @@ sampleBtn.addEventListener('click', () => {
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.textContent = '⏸'; // 再生中になったら一時停止マークにする
+        playPauseBtn.textContent = '⏸';
     } else {
         audio.pause();
-        playPauseBtn.textContent = '▶'; // 一時停止したら再生マークに戻す
+        playPauseBtn.textContent = '▶';
     }
 });
 
@@ -107,11 +105,10 @@ audio.addEventListener('timeupdate', () => {
 });
 
 audio.addEventListener('ended', () => {
-    audio.currentTime = 0; // 再生位置を最初に戻す
-    playPauseBtn.textContent = '▶'; // ボタンを再生マークに戻す
-    progressFill.style.width = '0%'; // バーをゼロに戻す
+    audio.currentTime = 0;
+    playPauseBtn.textContent = '▶';
+    progressFill.style.width = '0%';
 });
-    
 </script>
 
 </body>
