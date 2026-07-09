@@ -75,14 +75,11 @@ const audio = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 
-// Sampleボタンを押した時の処理
 sampleBtn.addEventListener('click', () => {
-    // プレイヤーが隠れている場合は、表示する（自動再生はしない）
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
-        playPauseBtn.textContent = '▶'; // 【修正】最初は停止状態なので再生マークにする
+        playPauseBtn.textContent = '▶';
     } else {
-        // すでに表示されている時にもう一度押したら、音を止めてプレイヤーを閉じる
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
