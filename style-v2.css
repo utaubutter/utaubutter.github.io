@@ -155,21 +155,29 @@ section p{
 
 .buttons{
     display:flex;
-    gap:10px;
-    margin-top:28px;
-    flex-wrap:wrap;
+    gap:12px;
+    margin-top:32px;
 }
 
 .buttons a{
-    padding:12px 18px;
-    border-radius:14px;
-    background:rgba(255,255,255,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-width:120px;
+    height:44px;
+    border-radius:999px;
+    background:rgba(255,255,255,.35);
     border:1px solid rgba(255,255,255,.75);
+    color:#4b5563;
+    font-size:.95rem;
+    letter-spacing:.05em;
     transition:.25s;
 }
 
 .buttons a:hover{
+    background:rgba(255,255,255,.55);
     transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(174,190,212,.18);
 }
 
 /* ------------------------
