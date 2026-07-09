@@ -78,43 +78,27 @@ const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 const progressBar = document.querySelector('.progress-bar'); 
 
-let delayTimer = null; 
-
 // Sampleボタン（上の大きなボタン）を押した時の処理
 sampleBtn.addEventListener('click', () => {
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
         playPauseBtn.textContent = '▶';
     } else {
-        clearTimeout(delayTimer);
+        // 閉じるときは音を完全に止めて初期化
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
         progressFill.style.width = '0%';
+        playPauseBtn.textContent = '▶';
     }
 });
 
 // プレイヤー側の丸い再生・一時停止ボタンを押した時の処理
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
-        clearTimeout(delayTimer); 
-        
-        // ★ 再生位置が「最初（0秒）」のときだけディレイをかける
-        if (audio.currentTime === 0) {
-            playPauseBtn.textContent = '⏳'; 
-            delayTimer = setTimeout(() => {
-                audio.play();
-                playPauseBtn.textContent = '❚❚';
-            }, 1000); 
-        } else {
-            // ★ 一時停止からの再開（0秒じゃないとき）は、待たずにすぐ再生！
-            audio.play();
-            playPauseBtn.textContent = '❚❚';
-        }
-        
+        audio.play();
+        playPauseBtn.textContent = '❚❚';
     } else {
-        // 一時停止する時はいつでも即座にストップ
-        clearTimeout(delayTimer);
         audio.pause();
         playPauseBtn.textContent = '▶';
     }
@@ -123,9 +107,6 @@ playPauseBtn.addEventListener('click', () => {
 // 再生バーをクリックして好きな位置から再生する機能
 progressBar.style.cursor = 'pointer'; 
 progressBar.addEventListener('click', (e) => {
-    // もしディレイ待機中にバーがクリックされたら、待機をキャンセルして即再生させる
-    clearTimeout(delayTimer);
-
     const coordX = e.offsetX;
     const totalWidth = progressBar.clientWidth;
     const clickPercent = coordX / totalWidth;
