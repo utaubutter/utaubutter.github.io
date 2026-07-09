@@ -167,26 +167,26 @@ section p{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
+    gap: 12px;
     margin: 24px auto;
     width: 100%;
+    flex-wrap: nowrap;
 }
 
-.buttons a{
-    display: flex;
+.buttons a {
+    display: inline-flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-width: 120px;
-    height: 44px;
-    border-radius: 999px;
+    justify-content: center;
     background: rgba(255,255,255,.35);
     border: 1px solid rgba(255,255,255,.75);
     color: #4b5563;
-    font-size: .95rem;
-    letter-spacing: .05em;
-    transition: .25s;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    width: 45%;
+    max-width: 160px;
+    box-sizing: border-box;
 }
 
 .buttons a:hover{
@@ -196,12 +196,13 @@ section p{
 }
 
 .buttons a span{
-    font-size: .95rem;
+    font-size: .9rem;
+    font-weight: 500;
 }
 
 .buttons a small{
     margin-top: 2px;
-    font-size: .72rem;
+    font-size: .7rem;
     color: #9ca3af;
     letter-spacing: .08em;
 }
