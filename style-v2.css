@@ -161,7 +161,7 @@ section p{
 
 .buttons a{
     display: flex;
-    flex-direction: column; /* 重複していたため統合 */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-width: 120px;
@@ -265,7 +265,7 @@ section p{
     background: rgba(255,255,255,.35);
     border: 1px solid rgba(255,255,255,.7);
     overflow: hidden;
-    display: flex;         /* 重複していたため統合 */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -312,7 +312,7 @@ section p{
 }
 
 .info-row p, .info-value p{
-    margin: 0; /* 共通のmarginをグループ化 */
+    margin: 0;
 }
 
 .info-row p{
