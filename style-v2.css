@@ -246,11 +246,8 @@ section p{
 .buttons{
 
     display:flex;
-
-    gap:14px;
-
-    margin-top:24px;
-
+    gap:10px;
+    margin-top:28px;
     flex-wrap:wrap;
 
 }
@@ -258,17 +255,11 @@ section p{
 .buttons a{
 
     text-decoration:none;
-
     color:#3f4652;
-
     padding:12px 18px;
-
     border-radius:14px;
-
     background:rgba(255,255,255,.45);
-
     border:1px solid rgba(255,255,255,.75);
-
     transition:.25s;
 
 }
@@ -292,19 +283,12 @@ section p{
 .voice-item{
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     text-decoration:none;
-
     color:inherit;
-
     padding:28px 0;
-
     border-bottom:1px solid rgba(190,205,224,.35);
-
     transition:.25s ease;
 
 }
@@ -312,15 +296,10 @@ section p{
 .voice-item::after{
 
     content:"→";
-
     font-size:1rem;
-
     color:#8d97a5;
-
     opacity:0;
-
     transform:translateX(-8px);
-
     transition:.25s;
 
 }
@@ -334,7 +313,6 @@ section p{
 .voice-item:hover::after{
 
     opacity:1;
-
     transform:translateX(0);
 
 }
@@ -410,22 +388,22 @@ a:active {
 .character{
 
     display:grid;
-    grid-template-columns:180px 1fr;
-    gap:40px;
+    grid-template-columns:160px 1fr;
+    gap:36px;
     align-items:start;
 
 }
 
 .character-image{
 
-    width:100%;
-    max-width:180px;
+    width:160px;
     aspect-ratio:2 / 3;
 
-    border-radius:24px;
+    border-radius:20px;
 
     background:rgba(255,255,255,.35);
     border:1px solid rgba(255,255,255,.7);
+   overflow:hidden;
 
 }
 
@@ -438,7 +416,7 @@ a:active {
 .character-info h1{
 
     text-align:left;
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight:300;
     letter-spacing:.05em;
 
@@ -446,14 +424,15 @@ a:active {
 
 .roman{
 
-    margin-top:8px;
+    margin-top:4px;
     color:#9ca3af;
+   font-size:.9rem;
     letter-spacing:.08em;
 }
 
 .character-info section{
 
-    margin-top:32px;
+    margin-top:20px;
 
 }
 
@@ -462,13 +441,27 @@ a:active {
     .character{
 
         grid-template-columns:1fr;
-        gap:32px;
+        gap:28px;
+
+    }
+
+    .character-image{
+
+        width:180px;
+        margin:0 auto;
 
     }
 
     .character-info h1{
 
         font-size:1.4rem;
+        text-align:center;
+
+    }
+
+    .roman{
+
+        text-align:center;
 
     }
 
