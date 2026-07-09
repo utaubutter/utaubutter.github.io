@@ -78,22 +78,18 @@ const audio = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 
-// Sampleボタンを押した時の処理
 sampleBtn.addEventListener('click', () => {
-    // プレイヤーが隠れている場合は、表示して再生する
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
         audio.play();
         playPauseBtn.textContent = '⏸';
     } else {
-        // 【修正】すでに表示されている時にもう一度押したら、音を止めてプレイヤーを閉じる
         audio.pause();
-        audio.currentTime = 0; // 再生位置を最初に戻す
+        audio.currentTime = 0;
         miniPlayer.style.display = 'none';
     }
 });
 
-// プレイヤー側の再生・一時停止ボタンを押した時の処理
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
@@ -104,13 +100,11 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// 音声の再生位置に合わせてバーを伸ばす
 audio.addEventListener('timeupdate', () => {
     const progress = (audio.currentTime / audio.duration) * 100;
     progressFill.style.width = `${progress}%`;
 });
 
-// 曲が終わったら自動でプレイヤーを閉じる
 audio.addEventListener('ended', () => {
     miniPlayer.style.display = 'none';
     progressFill.style.width = '0%';
