@@ -357,9 +357,9 @@ section p{
 .text-link {
     font-size: 0.9rem;
     color: #8d97a5;
-    border-bottom: 1px dashed rgba(141, 151, 165, 0.4);
     padding-bottom: 2px;
-    transition: .25s;
+    border-bottom: 1px solid transparent;
+    transition: .25s ease;
 }
 
 .text-link:hover {
