@@ -436,6 +436,7 @@ section p{
     transition: width 0.1s linear;
 }
 
+/* キャラクターページのProfileセクションの隙間を縮める */
 .character-info + .profile-section,
 .mini-player + .profile-section {
     margin-top: 28px;
