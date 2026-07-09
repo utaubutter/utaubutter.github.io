@@ -498,12 +498,9 @@ a:active {
 
 }
 
-.info-value strong{
+.info-value p{
 
-    display:block;
-
-    font-size:1rem;
-    font-weight:400;
+    margin:0;
     color:#30353d;
 
 }
@@ -511,9 +508,7 @@ a:active {
 .info-value span{
 
     display:block;
-
     margin-top:2px;
-
     font-size:.85rem;
     color:#9ca3af;
 
