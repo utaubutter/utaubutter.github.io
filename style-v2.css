@@ -358,13 +358,13 @@ section p{
     font-size: 0.9rem;
     color: #8d97a5;
     padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent; /* 最初は透明な線にしておく */
     transition: .25s ease;
 }
 
 .text-link:hover {
     color: #30353d;
-    border-bottom-color: #30353d;
+    border-bottom-color: #30353d; /* ホバーで色をつけて一直線にする */
 }
 
 /* ------------------------
