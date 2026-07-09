@@ -180,6 +180,27 @@ section p{
     box-shadow:0 8px 24px rgba(174,190,212,.18);
 }
 
+.buttons a{
+    flex-direction:column;
+}
+
+.buttons a span{
+    font-size:.95rem;
+}
+
+.buttons a small{
+    margin-top:2px;
+    font-size:.72rem;
+    color:#9ca3af;
+    letter-spacing:.08em;
+}
+
+.coming{
+    color:#9ca3af;
+    font-size:.9rem;
+    letter-spacing:.08em;
+}
+
 /* ------------------------
    Voicebank List
 ------------------------- */
@@ -247,6 +268,18 @@ section p{
     background:rgba(255,255,255,.35);
     border:1px solid rgba(255,255,255,.7);
     overflow:hidden;
+}
+
+.character-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.character-image span{
+    font-size:.85rem;
+    color:#b0b8c5;
+    letter-spacing:.08em;
 }
 
 .character-info{
