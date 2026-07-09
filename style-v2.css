@@ -353,6 +353,7 @@ section p{
    Responsive
 ------------------------- */
 
+/* スマホ（640px以下）のときの個別調整 */
 @media (max-width: 640px){
     body{
         padding: 20px;
