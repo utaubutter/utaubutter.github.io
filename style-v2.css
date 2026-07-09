@@ -351,11 +351,13 @@ section p{
 
 .voice-item p{
 
-    margin-top:8px;
-
-    color:#8d97a5;
+    margin-top:6px;
 
     font-size:.9rem;
+
+    color:#9ca3af;
+
+    letter-spacing:.08em;
 
 }
 
