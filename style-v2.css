@@ -390,7 +390,7 @@ section p{
     }
 
     .buttons {
-        flex-direction: column; /* スマホでは縦並びにする */
+        flex-direction: column;
     }
     
     .buttons a {
