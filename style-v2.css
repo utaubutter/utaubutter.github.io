@@ -451,8 +451,9 @@ a:active {
 .character-info h1{
 
     text-align:left;
-    font-size:2rem;
-    letter-spacing:.08em;
+    font-size:1.6rem;
+    font-weight:300;
+    letter-spacing:.05em;
 
 }
 
@@ -480,8 +481,33 @@ a:active {
 
     .character-info h1{
 
-        font-size:1.7rem;
+        font-size:1.4rem;
 
     }
+
+}
+
+.info-row{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:24px;
+
+}
+
+.info-row h2{
+
+    margin:0;
+    font-size:1rem;
+    font-weight:400;
+
+}
+
+.info-row p{
+
+    margin:0;
+    color:#6d7481;
 
 }
