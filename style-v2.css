@@ -491,3 +491,30 @@ a:active {
     color:#6d7481;
 
 }
+
+.info-value{
+
+    text-align:right;
+
+}
+
+.info-value strong{
+
+    display:block;
+
+    font-size:1rem;
+    font-weight:400;
+    color:#30353d;
+
+}
+
+.info-value span{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:.85rem;
+    color:#9ca3af;
+
+}
