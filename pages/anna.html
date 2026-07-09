@@ -36,25 +36,24 @@
                     </div>
                 </section>
             
-                <section class="buttons">
+        <section class="buttons">
+            <a href="javascript:void(0);" id="sample-btn">
+                <span>Sample</span>
+            </a>
+            <a href="#">
+                <span>Download</span>
+                <small>追加予定</small>
+            </a>
+        </section>
 
-    <a href="javascript:void(0);" id="sample-btn">
-        <span>Sample</span>
-    </a>
-    <a href="#">
-        <span>Download</span>
-        <small>追加予定</small>
-    </a>
-</section>
-
-<div class="mini-player" id="mini-player">
-    <audio id="audio-player" src="../audio/anna-sample.mp3"></audio>
-    <button class="player-btn" id="play-pause-btn">▶</button>
-    <div class="player-info">
-        <span class="player-title">Sample Voice</span>
-        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-    </div>
-</div>
+        <div class="mini-player" id="mini-player">
+            <audio id="audio-player" src="../audio/sample.mp3"></audio>
+            <button class="player-btn" id="play-pause-btn">▶</button>
+            <div class="player-info">
+                <span class="player-title">Sample Voice</span>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+        </div>
 
         <section class="profile-section">
             <h2>Profile</h2>
@@ -72,26 +71,30 @@
         
     </main>
 
-    <script>
+<script>
 const sampleBtn = document.getElementById('sample-btn');
 const miniPlayer = document.getElementById('mini-player');
 const audio = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 
+// Sampleボタンを押した時の処理
 sampleBtn.addEventListener('click', () => {
+    // プレイヤーが隠れている場合は、表示して再生する
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
         audio.play();
         playPauseBtn.textContent = '⏸';
     } else {
-        togglePlay();
+        // 【修正】すでに表示されている時にもう一度押したら、音を止めてプレイヤーを閉じる
+        audio.pause();
+        audio.currentTime = 0; // 再生位置を最初に戻す
+        miniPlayer.style.display = 'none';
     }
 });
 
-playPauseBtn.addEventListener('click', togglePlay);
-
-function togglePlay() {
+// プレイヤー側の再生・一時停止ボタンを押した時の処理
+playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
         playPauseBtn.textContent = '⏸';
@@ -99,18 +102,19 @@ function togglePlay() {
         audio.pause();
         playPauseBtn.textContent = '▶';
     }
-}
+});
 
+// 音声の再生位置に合わせてバーを伸ばす
 audio.addEventListener('timeupdate', () => {
     const progress = (audio.currentTime / audio.duration) * 100;
     progressFill.style.width = `${progress}%`;
 });
 
+// 曲が終わったら自動でプレイヤーを閉じる
 audio.addEventListener('ended', () => {
-    playPauseBtn.textContent = '▶';
+    miniPlayer.style.display = 'none';
     progressFill.style.width = '0%';
 });
-        
 </script>
 
 </body>
