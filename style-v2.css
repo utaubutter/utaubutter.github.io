@@ -440,6 +440,15 @@ section p{
     transition: width 0.1s linear;
 }
 
+/* プレイヤー内のクレジット表記のスタイル */
+.player-credit {
+    display: block;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
 /* ------------------------
    Responsive
 ------------------------- */
