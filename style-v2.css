@@ -347,6 +347,26 @@ section p{
     color: #9ca3af;
 }
 
+.character-links {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.text-link {
+    font-size: 0.9rem;
+    color: #8d97a5;
+    border-bottom: 1px dashed rgba(141, 151, 165, 0.4);
+    padding-bottom: 2px;
+    transition: .25s;
+}
+
+.text-link:hover {
+    color: #30353d;
+    border-bottom-color: #30353d;
+}
+
 /* ------------------------
    Responsive
 ------------------------- */
@@ -405,6 +425,13 @@ section p{
 
     .roman{
         text-align: center;
+    }
+
+    .character-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 24px;
     }
 
    /* ------------------------
