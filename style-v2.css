@@ -422,3 +422,66 @@ a:active {
     }
 
 }
+
+/* ------------------------
+   Character Page
+------------------------- */
+
+.character{
+
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:48px;
+    align-items:start;
+
+}
+
+.character-image{
+
+    width:100%;
+    aspect-ratio:2 / 3;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,.7);
+
+}
+
+.character-info h1{
+
+    text-align:left;
+    font-size:2rem;
+    letter-spacing:.08em;
+
+}
+
+.roman{
+
+    margin-top:8px;
+    color:#9ca3af;
+    letter-spacing:.08em;
+}
+
+.character-info section{
+
+    margin-top:32px;
+
+}
+
+@media (max-width:640px){
+
+    .character{
+
+        grid-template-columns:1fr;
+        gap:32px;
+
+    }
+
+    .character-info h1{
+
+        font-size:1.7rem;
+
+    }
+
+}
