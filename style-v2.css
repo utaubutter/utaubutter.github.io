@@ -390,16 +390,23 @@ section p{
         text-align: center;
     }
 
+@media (max-width: 640px) {
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .buttons a {
+        width: 48%;
+        padding: 8px 10px;
     }
     
-    .buttons a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        max-width: 280px;
+    .buttons a span {
+        font-size: 0.85rem;
+    }
+    
+    .buttons a small {
+        font-size: 0.65rem;
     }
 }
