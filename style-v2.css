@@ -390,7 +390,6 @@ section p{
         text-align: center;
     }
 
-@media (max-width: 640px) {
     .buttons {
         flex-direction: row;
         flex-wrap: nowrap;
