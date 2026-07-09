@@ -417,11 +417,25 @@ section p{
     flex: 1;
 }
 
+/* 曲名のスタイル（少し小さくして、絶対に1行で収める） */
 .player-title {
     display: block;
-    font-size: 0.75rem;
-    color: #6d7481;
-    margin-bottom: 4px;
+    font-size: 0.7rem; /* 0.75rem から少しだけ小さく */
+    color: #4b5563; /* 少し文字色を濃くして見やすく */
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+    white-space: nowrap; /* 文字を絶対に改行させない */
+    overflow: hidden; /* 万が一溢れたら隠す */
+    text-overflow: ellipsis; /* もし幅が足りなくなったら「...」にするお守り */
+}
+
+/* クレジットのスタイル（改行時の行間などを整える） */
+.player-credit {
+    display: block;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    line-height: 1.4; /* 改行したときの行間をちょうどよく */
+    margin-bottom: 6px; /* バーとの隙間 */
     letter-spacing: 0.05em;
 }
 
@@ -438,15 +452,6 @@ section p{
     height: 100%;
     background: #8d97a5;
     transition: width 0.1s linear;
-}
-
-/* プレイヤー内のクレジット表記のスタイル */
-.player-credit {
-    display: block;
-    font-size: 0.65rem;
-    color: #9ca3af;
-    margin-bottom: 6px;
-    letter-spacing: 0.05em;
 }
 
 /* ------------------------
