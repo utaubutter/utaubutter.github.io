@@ -163,10 +163,14 @@ section p{
    Buttons
 ------------------------- */
 
-.buttons{
+.buttons {
     display: flex;
-    gap: 12px;
-    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 24px auto;
+    width: 100%;
 }
 
 .buttons a{
@@ -383,5 +387,18 @@ section p{
 
     .roman{
         text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column; /* スマホでは縦並びにする */
+    }
+    
+    .buttons a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
     }
 }
