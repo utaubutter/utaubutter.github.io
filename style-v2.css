@@ -367,6 +367,10 @@ section p{
         font-size: 2.3rem;
     }
 
+   /* ------------------------
+      Voicebank List 崩れ対策
+    ------------------------- */
+   
    .voice-item {
         flex-direction: column;
         align-items: flex-start;
@@ -381,6 +385,10 @@ section p{
     .voice-item p {
         margin-top: 2px;
     }
+   
+   /* ------------------------
+      Character Page 
+    ------------------------- */
    
     .character{
         grid-template-columns: 1fr;
@@ -401,6 +409,10 @@ section p{
         text-align: center;
     }
 
+   /* ------------------------
+      Buttons 崩れ対策
+    ------------------------- */
+   
     .buttons {
         flex-direction: row;
         flex-wrap: wrap;
