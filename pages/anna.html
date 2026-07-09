@@ -76,12 +76,19 @@ const miniPlayer = document.getElementById('mini-player');
 const audio = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
+// ★ 進行バーの親要素（クリックイベント用）を取得
+const progressBar = document.querySelector('.progress-bar'); 
 
+let delayTimer = null; // ★ ディレイ用のタイマーを記憶する変数
+
+// Sampleボタン（上の大きなボタン）を押した時の処理
 sampleBtn.addEventListener('click', () => {
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
         playPauseBtn.textContent = '▶';
     } else {
+        // 閉じるときはタイマーも音も完全にリセット
+        clearTimeout(delayTimer);
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
@@ -89,16 +96,42 @@ sampleBtn.addEventListener('click', () => {
     }
 });
 
+// プレイヤー側の丸い再生・一時停止ボタンを押した時の処理
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play();
-        playPauseBtn.textContent = '■';
+        // ★ すでにタイマーが動いていたら一旦クリア（連打対策）
+        clearTimeout(delayTimer); 
+        
+        // ★ 再生ボタンを押して「2秒後」に再生する設定（2000ms = 2秒）
+        // 待機中であることが分かるように、ボタンを一時的に「⏳」などにしても可愛いですよ！
+        playPauseBtn.textContent = '⏳'; 
+        
+        delayTimer = setTimeout(() => {
+            audio.play();
+            playPauseBtn.textContent = '❚❚';
+        }, 2000); // ⏱️ ここを変えれば何秒後でも調整できます（例: 1秒なら 1000）
+        
     } else {
+        // 一時停止の時はタイマーをクリアしてすぐ止める
+        clearTimeout(delayTimer);
         audio.pause();
         playPauseBtn.textContent = '▶';
     }
 });
 
+// ★ 再生バーをクリックして好きな位置から再生する機能
+progressBar.style.cursor = 'pointer'; // マウスを乗せたらポインタを指マークにする
+progressBar.addEventListener('click', (e) => {
+    // 全体の長さに対して、クリックされた位置が何パーセントかを計算
+    const coordX = e.offsetX;
+    const totalWidth = progressBar.clientWidth;
+    const clickPercent = coordX / totalWidth;
+    
+    // 音声の再生位置を、クリックされた位置の時間にジャンプさせる
+    audio.currentTime = clickPercent * audio.duration;
+});
+
+// 音声の再生位置に合わせてバーを伸ばす
 audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
         const progress = (audio.currentTime / audio.duration) * 100;
@@ -106,6 +139,7 @@ audio.addEventListener('timeupdate', () => {
     }
 });
 
+// 曲が最後まで終わったら自動で最初の状態に戻す
 audio.addEventListener('ended', () => {
     audio.currentTime = 0;
     playPauseBtn.textContent = '▶';
