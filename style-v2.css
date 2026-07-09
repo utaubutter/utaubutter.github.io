@@ -50,6 +50,10 @@ a{
         inset 0 1px 0 rgba(255,255,255,.9);
 }
 
+.glass section.profile-section {
+    margin-top: 16px !important;
+}
+
 /* ------------------------
    Title / Text
 ------------------------- */
@@ -434,12 +438,6 @@ section p{
     height: 100%;
     background: #8d97a5;
     transition: width 0.1s linear;
-}
-
-/* キャラクターページのProfileセクションの隙間を縮める */
-.character-info + .profile-section,
-.mini-player + .profile-section {
-    margin-top: 28px;
 }
 
 /* ------------------------
