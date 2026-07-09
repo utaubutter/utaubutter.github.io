@@ -37,10 +37,19 @@
                 </section>
             
                 <section class="buttons">
-                    <a href="#">
+                    <a href="javascript:void(0);" id="sample-btn">
                         <span>Sample</span>
-                        <small>追加予定</small>
                     </a>
+                    
+                    <div class="mini-player" id="mini-player">
+                    <audio id="audio-player" src="../audio/sample.mp3"></audio> <!-- 音声ファイルのパス -->
+                    <button class="player-btn" id="play-pause-btn">▶</button>
+                    <div class="player-info">
+                    <span class="player-title">Sample Voice</span>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                    </div>
+                    </div>
+                    
                     <a href="#">
                         <span>Download</span>
                         <small>追加予定</small>
