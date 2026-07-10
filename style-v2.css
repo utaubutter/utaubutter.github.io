@@ -1,5 +1,5 @@
 /* ------------------------
-   Butter Website v2
+    Butter Website v2
 ------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
@@ -34,7 +34,7 @@ a{
 }
 
 /* ------------------------
-   Glass Card
+    Glass Card
 ------------------------- */
 
 .glass{
@@ -50,12 +50,8 @@ a{
         inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-.glass section.profile-section {
-    margin-top: 16px !important;
-}
-
 /* ------------------------
-   Title / Text
+    Title / Text
 ------------------------- */
 
 h1{
@@ -74,7 +70,7 @@ h1{
 }
 
 /* ------------------------
-   Navigation
+    Navigation
 ------------------------- */
 
 nav{
@@ -112,7 +108,7 @@ nav a:hover::after{
 }
 
 /* ------------------------
-   Footer
+    Footer
 ------------------------- */
 
 footer{
@@ -134,7 +130,7 @@ footer a:hover {
 }
 
 /* ------------------------
-   Common Section
+    Common Section
 ------------------------- */
 
 .back{
@@ -163,8 +159,14 @@ section p{
     line-height: 1.8;
 }
 
+.coming{
+    color: #9ca3af;
+    font-size: .9rem;
+    letter-spacing: .08em;
+}
+
 /* ------------------------
-   Buttons
+    Buttons
 ------------------------- */
 
 .buttons {
@@ -209,14 +211,8 @@ section p{
     letter-spacing: .08em;
 }
 
-.coming{
-    color: #9ca3af;
-    font-size: .9rem;
-    letter-spacing: .08em;
-}
-
 /* ------------------------
-   Voicebank List
+    Voicebank List
 ------------------------- */
 
 .voice-list{
@@ -265,7 +261,7 @@ section p{
 }
 
 /* ------------------------
-   Character Page
+    Character Page
 ------------------------- */
 
 .character{
@@ -351,6 +347,15 @@ section p{
     color: #9ca3af;
 }
 
+.info-value .flag-note {
+    display: block;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    line-height: 1.4;
+    margin-top: 4px;
+    text-align: right;
+}
+
 .character-links {
     margin-top: 32px;
     display: flex;
@@ -371,8 +376,31 @@ section p{
     border-bottom-color: #30353d;
 }
 
+.glass section.profile-section {
+    margin-top: 16px !important;
+}
+
+.glass .profile-list {
+    list-style-type: none !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 12px 0 0 0;
+}
+
+.glass .profile-list li {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.glass .profile-list li strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
 /* ------------------------
-   Mini Audio Player
+    Mini Audio Player
 ------------------------- */
 
 .mini-player {
@@ -417,25 +445,23 @@ section p{
     flex: 1;
 }
 
-/* 曲名のスタイル（少し小さくして、絶対に1行で収める） */
 .player-title {
     display: block;
-    font-size: 0.7rem; /* 0.75rem から少しだけ小さく */
-    color: #4b5563; /* 少し文字色を濃くして見やすく */
+    font-size: 0.7rem;
+    color: #4b5563;
     margin-bottom: 2px;
     letter-spacing: 0.05em;
-    white-space: nowrap; /* 文字を絶対に改行させない */
-    overflow: hidden; /* 万が一溢れたら隠す */
-    text-overflow: ellipsis; /* もし幅が足りなくなったら「...」にするお守り */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* クレジットのスタイル（改行時の行間などを整える） */
 .player-credit {
     display: block;
     font-size: 0.65rem;
     color: #9ca3af;
-    line-height: 1.4; /* 改行したときの行間をちょうどよく */
-    margin-bottom: 6px; /* バーとの隙間 */
+    line-height: 1.4;
+    margin-bottom: 6px;
     letter-spacing: 0.05em;
 }
 
@@ -454,57 +480,8 @@ section p{
     transition: width 0.1s linear;
 }
 
-/* プロフィールとクレジットの箇条書きを綺麗にする */
-.profile-list {
-    list-style: none; /* 点々を消す */
-    padding: 0;
-    margin: 12px 0 0 0;
-}
-
-.profile-list li {
-    font-size: 0.85rem;
-    color: #4b5563;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-}
-
-.profile-list li strong {
-    color: #1f2937; /* 項目の見出し（性別など）を少し濃く */
-    font-weight: 600;
-}
-
-/* 📌 Flagの注釈が被らないように位置と文字サイズを調整 */
-.info-value .flag-note {
-    display: block;
-    font-size: 0.65rem; /* ちょっと小さくして収まりを良く */
-    color: #9ca3af;
-    line-height: 1.4;
-    margin-top: 4px;
-    text-align: right; /* 右寄せにして綺麗に並べる */
-}
-
-/* 📌 Profile/Creditの点々（黒丸）を確実に消し去る */
-.glass .profile-list {
-    list-style-type: none !important; /* 強制的に点々を消す */
-    list-style: none !important;
-    padding-left: 0 !important; /* 左側の謎の隙間をリセット */
-    margin: 12px 0 0 0;
-}
-
-.glass .profile-list li {
-    font-size: 0.85rem;
-    color: #4b5563;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-}
-
-.glass .profile-list li strong {
-    color: #1f2937;
-    font-weight: 600;
-}
-
 /* ------------------------
-   Responsive
+    Responsive
 ------------------------- */
 
 @media (max-width: 640px){
@@ -520,12 +497,8 @@ section p{
     h1{
         font-size: 2.3rem;
     }
-
-   /* ------------------------
-      Voicebank List
-    ------------------------- */
    
-   .voice-item {
+    .voice-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -539,10 +512,6 @@ section p{
     .voice-item p {
         margin-top: 2px;
     }
-   
-   /* ------------------------
-      Character Page
-    ------------------------- */
    
     .character{
         grid-template-columns: 1fr;
@@ -569,10 +538,6 @@ section p{
         gap: 12px;
         margin-top: 24px;
     }
-
-   /* ------------------------
-      Buttons
-    ------------------------- */
    
     .buttons {
         flex-direction: row;
