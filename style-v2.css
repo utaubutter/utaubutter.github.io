@@ -485,6 +485,55 @@ section.profile-section {
 }
 
 /* ------------------------
+    Guideline Page
+------------------------- */
+
+.terms-content {
+    margin-top: 32px;
+    text-align: justify;
+}
+
+.terms-section {
+    margin-bottom: 28px;
+}
+
+.terms-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+.terms-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.prohibited-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 8px 0;
+}
+
+.prohibited-list li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 8px;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+.prohibited-list small {
+    color: #888;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/* ------------------------
     Responsive
 ------------------------- */
 
