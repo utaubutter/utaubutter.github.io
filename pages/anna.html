@@ -17,18 +17,29 @@
         <!-- 後で立ち絵を入れる -->
     </div>
 
-    <div class="character-info">
-        <h1>姫矢杏菜</h1>
-        <p class="roman">Himeya Anna</p>
+<div class="character-info">
+    <h1>姫矢杏菜</h1>
+    <p class="roman">Himeya Anna</p>
 
-        <div class="info-row">
-            <h2>Format</h2>
-            <div class="info-value"><p>VCV</p><span>単音階連続音</span></div>
+    <div class="info-row">
+        <h2>Format</h2>
+        <div class="info-value"><p>VCV</p><span>単音階連続音</span></div>
+    </div>
+    <div class="info-row">
+        <h2>Recording</h2>
+        <div class="info-value"><p>2019</p></div>
+    </div>
+    <div class="info-row">
+        <h2>Engine</h2>
+        <div class="info-value"><p>f2resamp (推奨)</p></div>
+    </div>
+    <div class="info-row">
+        <h2>Flag</h2>
+        <div class="info-value">
+            <p>g-5 (推奨)</p>
+            <span>※g-2～g-10の範囲で調整してください。サンプルはg-5です。</span>
         </div>
-        <div class="info-row">
-            <h2>Recording</h2>
-            <div class="info-value"><p>2019</p></div>
-        </div>
+    </div>
 
         <section class="buttons">
             <a href="javascript:void(0);" id="sample-btn">
@@ -56,7 +67,7 @@
 
 <section class="profile-section">
     <h2>Profile</h2>
-    <p class="coming">追加予定</p>
+    <p class="coming"></p>
 </section>
 
 <div class="character-links">
@@ -78,13 +89,11 @@ const playPauseBtn = document.getElementById('play-pause-btn');
 const progressFill = document.getElementById('progress-fill');
 const progressBar = document.querySelector('.progress-bar'); 
 
-// Sampleボタン（上の大きなボタン）を押した時の処理
 sampleBtn.addEventListener('click', () => {
     if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
         miniPlayer.style.display = 'flex';
         playPauseBtn.textContent = '▶';
     } else {
-        // 閉じるときは音を完全に止めて初期化
         audio.pause();
         audio.currentTime = 0; 
         miniPlayer.style.display = 'none';
@@ -93,7 +102,6 @@ sampleBtn.addEventListener('click', () => {
     }
 });
 
-// プレイヤー側の丸い再生・一時停止ボタンを押した時の処理
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
@@ -104,7 +112,6 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// 再生バーをクリックして好きな位置から再生する機能
 progressBar.style.cursor = 'pointer'; 
 progressBar.addEventListener('click', (e) => {
     const coordX = e.offsetX;
@@ -113,12 +120,10 @@ progressBar.addEventListener('click', (e) => {
     
     audio.currentTime = clickPercent * audio.duration;
     
-    // バーをクリックした後は自動で即再生する
     audio.play();
     playPauseBtn.textContent = '❚❚';
 });
 
-// 音声の再生位置に合わせてバーを伸ばす
 audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
         const progress = (audio.currentTime / audio.duration) * 100;
@@ -126,7 +131,6 @@ audio.addEventListener('timeupdate', () => {
     }
 });
 
-// 曲が最後まで終わったら自動で最初の状態に戻す
 audio.addEventListener('ended', () => {
     audio.currentTime = 0;
     playPauseBtn.textContent = '▶';
