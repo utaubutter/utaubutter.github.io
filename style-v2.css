@@ -551,6 +551,14 @@ section.profile-section {
     text-align: left;
 }
 
+.contact-note {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
 /* ------------------------
     Responsive
 ------------------------- */
