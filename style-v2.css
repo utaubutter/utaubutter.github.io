@@ -376,25 +376,24 @@ section p{
     border-bottom-color: #30353d;
 }
 
-.glass section.profile-section {
+section.profile-section {
     margin-top: 16px !important;
 }
 
-.glass .profile-list {
-    list-style-type: none !important;
+.profile-list {
     list-style: none !important;
     padding-left: 0 !important;
     margin: 12px 0 0 0;
 }
 
-.glass .profile-list li {
+.profile-list li {
     font-size: 0.85rem;
     color: #4b5563;
     line-height: 1.8;
     letter-spacing: 0.02em;
 }
 
-.glass .profile-list li strong {
+.profile-list li strong {
     color: #374151;
     font-weight: 500;
 }
