@@ -11,6 +11,7 @@
     <main class="glass">
         <a class="back" href="voicebank.html">← Voicebank</a>
 
+        <!-- Character Area -->
         <div class="character">
             <div class="character-image">
                 <span>追加予定</span>
@@ -21,49 +22,150 @@
                 <h1>日波音レベカ creamcheese</h1>
                 <p class="roman">Hinamine Rebecca</p>
 
-                <section class="info-row">
+                <div class="info-row">
                     <h2>Format</h2>
                     <div class="info-value">
                         <p>CV Append</p>
                         <span>単音階単独音</span>
                     </div>
-                </section>
-
-                <section class="info-row">
+                </div>
+                <div class="info-row">
                     <h2>Recording</h2>
                     <div class="info-value">
                         <p>2011</p>
                     </div>
-                </section>
+                </div>
+                <div class="info-row">
+                    <h2>Engine</h2>
+                    <div class="info-value">
+                        <p>f2resamp (推奨)</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <h2>Flag</h2>
+                    <div class="info-value">
+                        <p>g-2 (推奨)</p>
+                        <span class="flag-note">※g-2～g-5の範囲で<br>調整してください。</span>
+                    </div>
+                </div>
 
                 <section class="buttons">
-                    <a href="#">
+                    <a href="javascript:void(0);" id="sample-btn">
                         <span>Sample</span>
-                        <small>追加予定</small>
                     </a>
                     <a href="#">
                         <span>Download</span>
                         <small>追加予定</small>
                     </a>
                 </section>
+
+                <!-- Mini Audio Player -->
+                <div class="mini-player" id="mini-player">
+                    <audio id="audio-player" src="../assets/audio/rbcc-s.mp3"></audio>
+                    <button class="player-btn" id="play-pause-btn">▶</button>
+
+                    <div class="player-info">
+                        <span class="player-title">大きな栗の木の下で</span>
+                        <span class="player-credit">UST：有魚神弥／番煎P<br>出力：g-2 & f2resamp</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Profile / Credit Area -->
         <section class="profile-section">
             <h2>Profile</h2>
-            <p class="coming">追加予定</p>
+            <ul class="profile-list">
+                <li><strong>読み：</strong>ひなみね れべか</li>
+                <li><strong>性別：</strong>女の子</li>
+                <li><strong>年齢：</strong>小中学生くらい</li>
+                <li><strong>身長：</strong>150cmくらい</li>
+            </ul>
+
+            <h2 style="margin-top: 24px;">Credit</h2>
+            <ul class="profile-list">
+                <li><strong>音源制作：</strong>butter</li>
+                <li><strong>立ち絵：</strong>準備中</li>
+            </ul>
         </section>
-    
+
+        <!-- Navigation Links -->
         <div class="character-links">
             <a href="../pages/guideline.html" class="text-link" target="_blank" rel="noopener noreferrer">Guideline</a>
             <a href="../pages/contact.html" class="text-link" target="_blank" rel="noopener noreferrer">Contact</a>
         </div>
-    
+        
         <footer>
             © 2026 <a href="https://x.com/utaubutter" target="_blank" rel="noopener noreferrer">utaubutter</a>
         </footer>
         
     </main>
+
+    <!-- JavaScript -->
+    <script>
+    const sampleBtn = document.getElementById('sample-btn');
+    const miniPlayer = document.getElementById('mini-player');
+    const audio = document.getElementById('audio-player');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const progressFill = document.getElementById('progress-fill');
+    const progressBar = document.querySelector('.progress-bar'); 
+
+    // Sampleボタンの開閉
+    sampleBtn.addEventListener('click', () => {
+        if (miniPlayer.style.display === 'none' || miniPlayer.style.display === '') {
+            miniPlayer.style.display = 'flex';
+            playPauseBtn.textContent = '▶';
+        } else {
+            audio.pause();
+            audio.currentTime = 0; 
+            miniPlayer.style.display = 'none';
+            progressFill.style.width = '0%';
+            playPauseBtn.textContent = '▶';
+        }
+    });
+
+    // 再生・一時停止の切り替え
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = '❚❚';
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = '▶';
+        }
+    });
+
+    // シークバーのクリック処理
+    progressBar.style.cursor = 'pointer'; 
+    progressBar.addEventListener('click', (e) => {
+        const coordX = e.offsetX;
+        const totalWidth = progressBar.clientWidth;
+        const clickPercent = coordX / totalWidth;
+        
+        audio.currentTime = clickPercent * audio.duration;
+        
+        audio.play();
+        playPauseBtn.textContent = '❚❚';
+    });
+
+    // バーの進捗更新
+    audio.addEventListener('timeupdate', () => {
+        if (audio.duration) {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressFill.style.width = `${progress}%`;
+        }
+    });
+
+    // 再生終了時のリセット
+    audio.addEventListener('ended', () => {
+        audio.currentTime = 0;
+        playPauseBtn.textContent = '▶';
+        progressFill.style.width = '0%';
+    });
+    </script>
 
 </body>
 </html>
