@@ -362,7 +362,7 @@ section p{
 }
 
 .character-links {
-    margin-top: 32px;
+    margin-top: 56px;
     display: flex;
     justify-content: space-around;
     gap: 16px;
