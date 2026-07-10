@@ -387,7 +387,7 @@ section.profile-section {
 
 .profile-list {
     list-style: none !important;
-    padding-left: 4px !important;
+    padding-left: 0px !important;
     margin: 12px 0 0 0;
 }
 
