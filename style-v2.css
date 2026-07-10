@@ -266,7 +266,7 @@ section p{
 }
 
 /* ------------------------
-    Character Page
+    Character Page / Common Links
 ------------------------- */
 
 .character{
@@ -537,37 +537,18 @@ section.profile-section {
     Contact Page
 ------------------------- */
 
-.contact-link {
-    font-size: 0.95rem;
-    color: #4b5563;
-    font-weight: 400;
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    transition: .25s ease;
-}
-
-.contact-link:hover {
-    color: #8d97a5;
-    border-bottom-color: #8d97a5;
-}
-
-.contact-note {
-    color: #9ca3af;
-    font-size: 0.8rem;
-    display: block;
-    margin-top: 4px;
-}
-
 .contact-notice {
     margin-top: 56px;
-    text-align: center;
+    text-align: left;
 }
 
 .notice-text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 300;
     color: #6d7481;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 24px;
+    text-align: left;
 }
 
 /* ------------------------
