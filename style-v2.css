@@ -515,20 +515,20 @@ section.profile-section {
 .prohibited-list {
     list-style: none !important;
     padding-left: 0 !important;
-    margin: 8px 0;
+    margin: 12px 0;
 }
 
 .prohibited-list li {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #4b5563;
     margin-bottom: 8px;
-    text-indent: -1em;
-    padding-left: 1em;
+    text-indent: 0 !important;
+    padding-left: 0 !important;
 }
 
 .prohibited-list small {
-    color: #888;
+    color: #9ca3af;
     display: inline-block;
     margin-top: 2px;
 }
