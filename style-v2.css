@@ -640,4 +640,8 @@ section.profile-section {
         font-size: 0.65rem;
         white-space: nowrap;
     }
+
+    .nav-list {
+    margin-top: 24px;
+    }
 }
