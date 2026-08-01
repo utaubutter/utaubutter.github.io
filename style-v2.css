@@ -332,11 +332,11 @@ section p{
     margin-top: 20px;
 }
 
-.info-row{
+.info-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 24px;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .info-row h2{
@@ -353,12 +353,15 @@ section p{
     color: #6d7481;
 }
 
-.info-value{
+.info-value {
     text-align: right;
+    flex-shrink: 0;
+    min-width: 120px;
 }
 
 .info-value p{
     color: #30353d;
+    white-space: nowrap;
 }
 
 .info-value span{
@@ -366,15 +369,17 @@ section p{
     margin-top: 2px;
     font-size: .85rem;
     color: #9ca3af;
+    white-space: nowrap;
 }
 
 .info-value .flag-note {
-    display: block;
+    white-space: normal;
+    display: inline-block;
+    text-align: right;
     font-size: 0.65rem;
     color: #9ca3af;
     line-height: 1.4;
     margin-top: 4px;
-    text-align: right;
 }
 
 .character-links {
