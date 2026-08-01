@@ -313,6 +313,7 @@ section p{
 .character-info{
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     padding-top: 12px;
 }
