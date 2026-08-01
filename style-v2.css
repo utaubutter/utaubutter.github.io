@@ -293,6 +293,13 @@ section p{
     letter-spacing: .08em;
 }
 
+.chara-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .character-info{
     padding-top: 12px;
 }
