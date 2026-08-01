@@ -355,6 +355,8 @@ section p{
 
 .info-value{
     text-align: right;
+    width: max-content;
+    margin-left: auto;
 }
 
 .info-value p{
