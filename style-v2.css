@@ -302,6 +302,9 @@ section p{
     height: auto;
     object-fit: contain;
     display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .character-info{
