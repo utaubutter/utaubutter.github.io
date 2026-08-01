@@ -417,6 +417,19 @@ section.profile-section {
     font-weight: 500;
 }
 
+.profile-link {
+    font-size: 0.85rem;
+    color: #8d97a5;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: .25s ease;
+}
+
+.profile-link:hover {
+    color: #30353d;
+    border-bottom-color: #30353d;
+}
+
 /* ------------------------
     Mini Audio Player
 ------------------------- */
