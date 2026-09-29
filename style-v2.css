@@ -265,7 +265,7 @@ section p{
 }
 
 /* ------------------------
-Character Page / Common Links
+    Character Page / Common Links
 ------------------------- */
 
 .character{
@@ -760,11 +760,26 @@ section.profile-section {
 ------------------------- */
 
 body {
-    opacity: 1;
+    opacity: 1;    transform: translateY(0);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 0.4s ease forwards;
+}
+
 body.fade-out {
-    opacity: 0;
-    transform: translateY(-6px);
+    opacity: 0 !important;
+    transform: translateY(-6px) !important;
 }
