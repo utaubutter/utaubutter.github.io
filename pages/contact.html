@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
         </section>
 
         <section class="contact-section">
-            <h2>X (Twitter)</h2>
+            <h2 class="contact-title">X (Twitter)</h2>
             <p>
                 <a class="text-link" style="font-weight: 400; color: #30353d;" href="https://x.com/utaubutter" target="_blank" rel="noopener noreferrer">@utaubutter</a>
             </p>
@@ -28,10 +29,14 @@
         </section>
 
         <section class="contact-section">
-            <h2>Mail</h2>
-            <p><a class="text-link" style="font-weight: 400; color: #30353d; cursor: pointer;" 
-                onclick="navigator.clipboard.writeText('minjisweet42@gmail.com'); alert('メールアドレスをコピーしました\nEmail address copied');">
-                minjisweet42@gmail.com</a></p>
+            <h2 class="contact-title">Mail</h2>
+            <p>
+                <a class="text-link" style="font-weight: 400; color: #30353d; cursor: pointer;" 
+                   onclick="navigator.clipboard.writeText('minjisweet42@gmail.com'); alert('メールアドレスをコピーしました\nEmail address copied');">
+                   minjisweet42@gmail.com
+                </a>
+                <span class="copy-hint">（クリックでコピー）</span>
+            </p>
             <p><small class="contact-note">※ご連絡に気づかない可能性があるため、件名に「UTAU」や「音源名」など、ご用件がわかるキーワードの記載をお願いいたします。</small></p>
         </section>
 
@@ -48,7 +53,8 @@
     <footer>
     © 2026 <a href="https://x.com/utaubutter" target="_blank" rel="noopener noreferrer">utaubutter</a>
     </footer>
+    
 </main>
-<script src="../script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
