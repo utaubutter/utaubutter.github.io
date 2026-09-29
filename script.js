@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('page-loaded');
+    document.body.classList.remove('fade-out');
 
     const links = document.querySelectorAll('a[href$=".html"]');
 
@@ -11,15 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             e.preventDefault();
 
-            document.body.classList.remove('page-loaded');
+            // body全体（背景ごと）を一括で消す
+            document.body.classList.add('fade-out');
 
             setTimeout(() => {
                 window.location.href = destination;
-            }, 80);
+            }, 150);
         });
     });
 });
 
 window.addEventListener('pageshow', (event) => {
-    document.body.classList.add('page-loaded');
+    if (event.persisted) {
+        document.body.classList.remove('fade-out');
+    }
 });
