@@ -685,7 +685,6 @@ section.profile-section {
     border-radius: 16px;
 }
 
-/* NEWSからナビゲーション（Voicebank）までの間隔を少し詰める */
 .news-box + nav {
     margin-top: 36px;
 }
@@ -721,6 +720,7 @@ section.profile-section {
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     flex-shrink: 0;
+    width: 80px;
 }
 
 .news-text {
