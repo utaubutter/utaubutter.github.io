@@ -759,11 +759,17 @@ section.profile-section {
    Page Transition
 --------------------------------- */
 
-body {
-    opacity: 1;
-    transition: opacity 0.15s ease;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-body.fade-out {
-    opacity: 0 !important;
+main.glass {
+    animation: fadeIn 0.2s ease forwards;
 }
