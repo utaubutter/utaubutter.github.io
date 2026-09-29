@@ -685,6 +685,11 @@ section.profile-section {
     border-radius: 16px;
 }
 
+/* NEWSからナビゲーション（Voicebank）までの間隔を少し詰める */
+.news-box + nav {
+    margin-top: 36px;
+}
+
 .news-box h2 {
     font-size: 0.8rem;
     font-weight: 500;
