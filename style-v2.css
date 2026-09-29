@@ -754,3 +754,17 @@ section.profile-section {
     color: #30353d;
     border-bottom-color: #30353d;
 }
+
+/* ------------------------
+    Page Transition Animation
+------------------------- */
+
+body {
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+    transform: translateY(-6px);
+}
