@@ -756,15 +756,14 @@ section.profile-section {
 }
 
 /* --------------------------------
-   Page Transition Animation
+   Page Transition
 --------------------------------- */
 
 body {
-    opacity: 0;
-    transition: opacity 0.1s ease;
+    opacity: 1;
+    transition: opacity 0.15s ease;
 }
 
-/* ページ表示時 */
-body.page-loaded {
-    opacity: 1;
+body.fade-out {
+    opacity: 0 !important;
 }
