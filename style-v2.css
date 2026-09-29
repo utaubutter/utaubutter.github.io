@@ -590,6 +590,17 @@ section.profile-section {
     line-height: 1.6;
 }
 
+.contact-title {
+    font-size: 1.0rem;
+}
+
+.copy-hint {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-left: 4px;
+    font-weight: normal;
+}
+
 /* ------------------------
     Responsive
 ------------------------- */
