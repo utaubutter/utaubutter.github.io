@@ -265,7 +265,7 @@ section p{
 }
 
 /* ------------------------
-    Character Page / Common Links
+Character Page / Common Links
 ------------------------- */
 
 .character{
@@ -671,4 +671,72 @@ section.profile-section {
         font-size: 0.65rem;
         white-space: nowrap;
     }
+}
+
+/* ------------------------
+    Home News Section
+------------------------- */
+
+.news {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(190, 205, 224, 0.35);
+}
+
+.news h2 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #8b95a4;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.news ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news li {
+    font-size: 0.85rem;
+    color: #6d7481;
+    line-height: 1.6;
+    display: flex;
+    gap: 12px;
+}
+
+.news-date {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.news-text {
+    color: #4b5563;
+}
+
+/* ------------------------
+    Home External Links
+------------------------- */
+
+.external-links {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.external-links a {
+    font-size: 0.85rem;
+    color: #8d97a5;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s ease;
+    letter-spacing: 0.05em;
+}
+
+.external-links a:hover {
+    color: #30353d;
+    border-bottom-color: #30353d;
 }
